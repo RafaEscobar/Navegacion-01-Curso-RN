@@ -5,7 +5,14 @@ import { Pagina2Screen } from '../screens/Pagina2Screen';
 import { Pagina3Screen } from '../screens/Pagina3Screen';
 import { PaginaExtraScreen } from '../screens/PaginaExtraScreen';
 
-const Stack =  createStackNavigator();
+export type RootStackParams = {
+  Pagina1Screen: undefined,
+  Pagina2Screen: undefined,
+  Pagina3Screen: undefined,
+  Extra: { id: number, nombre: string, }
+}
+
+const Stack =  createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {  
   return (
@@ -18,9 +25,9 @@ export const StackNavigator = () => {
         }
       }}
     >
-        <Stack.Screen name='Pagina1Screen' options={{ title:'Pagina #1' }} component={Pagina1Screen}/>
-        <Stack.Screen name='Pagina2Screen' options={{ title:'Pagina #2' }} component={Pagina2Screen}/>
-        <Stack.Screen name='Pagina3Screen' options={{ title:'Pagina #3' }} component={Pagina3Screen}/>
+        <Stack.Screen name='Pagina1Screen' options={{ title:'Pagina 1' }} component={Pagina1Screen}/>
+        <Stack.Screen name='Pagina2Screen' options={{ title:'Pagina 2' }} component={Pagina2Screen}/>
+        <Stack.Screen name='Pagina3Screen' options={{ title:'Pagina 3' }} component={Pagina3Screen}/>
         <Stack.Screen name='Extra' options={{ title:'Pagina extra' }} component={PaginaExtraScreen}/>
     </Stack.Navigator>
   )
