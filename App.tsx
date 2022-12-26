@@ -10,7 +10,7 @@ export const App = () => {
         {/* //! 2) Llamamos a nuestro componente principal >>> En este caso al -StackNavigator- */}
         {/* <StackNavigator /> */}
 
-        {/* //! 33) Al generar un Drawer es necesarios sustituir el llamado al Stack por el del Drawer, ya que en cierto enlace del propio Drawer debe yacer el Stack */}
+        {/* //! 3) Al generar un Drawer es necesarios sustituir el llamado al Stack por el del Drawer, ya que en cierto enlace del propio Drawer debe yacer el Stack */}
         <DrawerNavigator />
       </NavigationContainer>
   );
