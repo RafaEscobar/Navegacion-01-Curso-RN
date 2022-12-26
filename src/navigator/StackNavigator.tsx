@@ -29,11 +29,10 @@ export const StackNavigator = () => {
       //* Podemos especificar cual Screen debe arrancar como la principal, de no especificarse tomara la primera 
       initialRouteName='Pagina1Screen'
       screenOptions={{
-        headerStyle:{          
-        },
         cardStyle: {
           backgroundColor: 'white'
-        }
+        },
+        
       }}
     >
       {/* //! 8) Generamos las Stack.Screen  */}

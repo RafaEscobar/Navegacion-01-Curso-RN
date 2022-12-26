@@ -20,8 +20,8 @@ export const PaginaExtraScreen = ({route}: Props) => {
     <View style={{backgroundColor: 'yellow'}}>
     {/* //! 32) Mostramos dos textos cuyo contenido proviene de los argumentos -id y nombre- */}
       {/* //* Usamos los argumentos con la siguinte sintaxis: params.nomArgumento */}
-        <Text style={{fontSize: 20}}>ID: {params.id}</Text>
-        <Text style={{fontSize: 20}}>Nombre: {params.nombre}</Text>
+        <Text style={{fontSize: 20, color: 'black'}}>ID: {params.id}</Text>
+        <Text style={{fontSize: 20, color: 'black'}}>Nombre: {params.nombre}</Text>
     </View>
   )
 }

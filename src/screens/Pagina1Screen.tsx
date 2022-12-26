@@ -1,15 +1,28 @@
-import React from 'react'
-import { Text, View,TouchableOpacity, } from 'react-native'
-import { StackScreenProps } from '@react-navigation/stack'
+import React, { useEffect } from 'react'
+import { Text, View,TouchableOpacity, useWindowDimensions } from 'react-native'
+import { DrawerScreenProps } from '@react-navigation/drawer'
 import { styles } from '../theme/appTheme'
 
 //! 9) Creamos la interfaz Props que extiende de StackScreenProps 
 //* El type es <any, any> ya que esta pantalla no requiere de la recepcion de argumentos, sino solo el trabajo de la navegacion
-interface Props extends StackScreenProps<any,any>{};
+interface Props extends DrawerScreenProps<any,any>{};
 
 //! 10) Generamos la arrowFunction con la desestructuracion del -navigation-
 //* Dicha desestructuracion apunta a la interfaz Props
 export const Pagina1Screen = ({navigation}:Props) => {
+
+  const { width } = useWindowDimensions();
+
+   useEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+          <Text style={{color:'black'}}>===</Text>
+        </TouchableOpacity>
+      )
+    });
+   }, []);
+ 
   return (
     //* Abrimos una View 1 -contendor principal-
     <View style={styles.marginGlobal}>
