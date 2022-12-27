@@ -18,7 +18,7 @@ export const CustomDrawer = ({navigation}: DrawerContentComponentProps) => {
               style={styles.avatar}
             />
           </View>
-          //! 43) Esta segunda VIEW se encargara de contener todas las etiquetas txt de enlace, que se muestran en el Drawer
+          {/* //! 43) Esta segunda VIEW se encargara de contener todas las etiquetas txt de enlace, que se muestran en el Drawer */}
           <View style={styles.draContainer}>
             {/* //* Dichas etiquetas se conforman por un -TouchableOpacity- con un -Text- dentro */}
             <TouchableOpacity 
